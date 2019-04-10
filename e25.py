@@ -1,14 +1,17 @@
 def main():
-    for n in range(0, 11):
-        print(fibonacci(n))
+    n_1 = 1
+    n_2 = 0
+    n = 0
+    i = 2
+    while True:
+        n = n_1 + n_2
+        sn = str(n)
+        if len(sn) == 1000:
+            print("Fibonacci Index {} is {}".format(i, sn))
+            break
+        n_2 = n_1
+        n_1 = n
+        i += 1
 
-
-def fibonacci(n):
-    if n == 0:
-        return 0
-    if n < 2:
-        return 1
-    
-    return fibonacci(n-1) + fibonacci(n-2)
 
 main()
